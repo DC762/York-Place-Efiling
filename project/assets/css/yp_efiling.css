@@ -972,6 +972,12 @@ body {
 
 /** account **/
 
+.landing--account {
+    display: block;
+    height: 400px;
+    overflow-y: hidden;
+}
+
 #efAuthenticatedContent {
     font-family: "Lato", sans-serif;
     font-size: 1.75rem;
@@ -984,6 +990,7 @@ body {
     background-image: none!important;
     border-radius: 2px!important;
     margin-bottom: 3rem!important;
+    margin-top: 3rem!important;
 }
 
 .efAccountMainMenuLi > a {
@@ -1011,7 +1018,7 @@ body {
 }
 
 #efMyAccountGlance > div > .efPanelHeader {
-    background-color: #1A4F85!important;
+    background-color: #3179b0!important;
     height: 50px!important;
     font-family: "Lato", sans-serif;
     font-weight: 600;
@@ -1019,6 +1026,22 @@ body {
     font-size: 1.5rem;
     color: #FFFFFF;
     padding: 14px 7px;
+}
+
+#company-search {
+    background-color: #01A551!important;
+    border: 1px solid #01A551!important;
+    background-image: none!important;
+    padding: 0!important;
+}
+
+#efPaymentAuthorityWidget > div > p > input {
+    background-color: #01A551!important;
+    border: 1px solid #01A551!important;
+    background-image: none!important;
+    width: 230px;
+    padding: 2px;
+    color: #FFFFFF;
 }
 
 .efTextInput+.efButton {
@@ -1039,7 +1062,9 @@ body {
     background-color: #01A551!important;
     border: 1px solid #01A551!important;
     background-image: none!important;
+    padding: 0px!important;
     font-size: 1.2rem!important;
+    color: #FFFFFF!important;
 }
 
 p > .efButton {
