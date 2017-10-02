@@ -1,19 +1,29 @@
 <div class="landing">
-	<a href="#fh5co-main" class="smoothscroll fh5co-arrow to-animate hero-animate-4"><i class="ti-angle-down"></i></a>
-	<!-- End fh5co-arrow -->
 	<div class="container-fluid">
 		<div class="row">
 			<img class="img-responsive" src="/assets/custom/files/site/img/hero/formation.jpg" alt="">
 		</div>
 		<div class="container">
-		<div class="row">
-		    <div class="col-md-12 col-sm-12 landing-box fadeInLeft animated">
-				<h1>Company Formations</h1>
-				<h2>York Place experienced company formation agents, skilled at the most complex company incorporations. We offer a premium service with specialist Mem and Arts available on request.</h2>
-				##PAGE_CONTENT#
-			</div>
-		  </div>
+    		<div class="row">
+    			<div class="col-md-12 col-sm-12 landing-box fadeInLeft animated">
+    				<h1>Company Formations</h1>
+    				<h2>York Place experienced company formation agents, skilled at the most complex company incorporations. We offer a premium service with specialist Mem and Arts available on request.</h2>
+    				<div class="col-lg-12">
+                        <div id="nameSearchResult">
+                            ##PAGE_CONTENT#
+                        </div>
+                        <form id="nameSearchForm" class="namesearch__form" action="http://www.companymanager.co.uk/name-check/" method="GET">
+                            <div class="input-group namesearch__input-group">
+                                 <input name="gle" type="hidden" value="namecheck">
+                                 <input id="namesearchInput" name="name" type="text" placeholder="Enter your company name" class="form-control nameCheck" type="text">
+                                 <span class="input-group-btn">
+                                    <input class="btn btn-default submit-btn" type="submit" value="Check" />
+                                 </span>
+                             </div>
+                         </form>
+    				</div>
+    			</div>
+    		</div>
 		</div>
 	</div>
 </div>
-

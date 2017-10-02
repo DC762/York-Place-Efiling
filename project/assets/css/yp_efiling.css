@@ -23,9 +23,24 @@
     content: "\f00c";
 }
 
+/** globals **/
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.global-margin {
+    margin-bottom: 10rem;
+}
 
 
 /** packages **/
+
+.submit-btn {
+    height: 41px!important;
+    width: 200px!important;
+    margin-top: 2px!important;
+}
 
 .content__packages {
     margin-top: 0;
@@ -40,6 +55,7 @@
 
 .content__packages-nav-tabs {
     border: none;
+    margin-top: 6rem;
 }
 
 .content__packages-nav-tabs-tab {
@@ -48,7 +64,8 @@
     height: 70px!important;
     font-family: "Lato", arial, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: -3px!important;
     -webkit-box-shadow: 0px -3px 50px -10px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0px -3px 50px -10px rgba(0, 0, 0, 0.4);
     box-shadow: 0px -3px 50px -10px rgba(0, 0, 0, 0.4);
@@ -284,7 +301,7 @@
 }
 
 .content__packages-package-title-area--special {
-    background-color: #3179B0; 
+    background-color: #3179B0;
 }
 
 .content__packages-package-title-area--bronze {
@@ -494,12 +511,13 @@
     border-radius: 150px;
     font-family: "Lato", arial, sans-serif;
     font-weight: 700;
+    font-size: 1.35rem;
     color: #1a518c;
     z-index: 99;
 }
 
 #orderProgressBarNumberOne {
-    padding: 1rem 1.7rem;
+    padding: 1rem 1.5rem;
 }
 
 #orderProgressBarNumberFour {
@@ -545,25 +563,28 @@
 
 /*******************JS Classes*********************/
 
-.js__order-progress-bar--order {
-    width: 95%;
-    margin: 2rem 0;
+.js__hide {
+    display: none!important;
+}
+
+.js__emulation--active {
+    display: block!important;
 }
 
 .js__order-progress-bar__section-number--complete {
-    background-color: #2eab2e ;
-    color: #FFFFFF ;
+    background-color: #2eab2e;
+    color: #FFFFFF;
 }
 
 .js__order-progress-bar__section-number--current {
-    background-color: #E57C27 ;
-    color: #FFFFFF ;
+    background-color: #E57C27;
+    color: #FFFFFF;
 }
 
 .js__order-progress-bar__bar--complete {
     left: 12%;
     width: 100%;
-    background-color: #2eab2e ;
+    background-color: #2eab2e;
 }
 
 .js__order-progress-bar--order .js__order-progress-bar__bar--complete {
@@ -571,32 +592,80 @@
 }
 
 @media (max-width: 1500px) {
-    .order-progress-bar__bar--complete {
+    .js__order-progress-bar__bar--complete {
         left: 13%;
     }
 }
 
 @media (max-width: 1400px) {
-    .order-progress-bar__bar--complete {
+    .js__order-progress-bar__bar--complete {
         left: 14%;
     }
 }
 
+@media (max-width: 1366px) and (max-height: 768px) {
+    .js__order-progress-bar__bar--complete {
+        left: 16%;
+    }
+}
 
-/*****************************Efiling Overides*********************************/
+@media (max-width: 1280px) and (max-height: 703px) {
+    .js__order-progress-bar__bar--complete {
+        left: 15%;
+    }
+}
+
+.js__order-progress-bar-complete--smaller {
+    right: -4rem;
+}
+
+
+/** ====================
+===== EF Overrides =====
+==================== **/
+
+/** general **/
 
 #efNameCheckPackage_tenstar {
-	display: none;
+    display: none!important;
+}
+
+#efNameCheckSearch {
+    display: none!important;
 }
 
 /** buy page **/
 
+#efContinueExistingPackageOrder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.75rem;
+    color: #444444;
+}
+
+#efPackageBuyPackageNameHeader {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
 #efPackagePurchaseOptionsContainer,
 #efGoPayNowForm {
     border: 1px solid #dedede;
-    padding: 4rem;
+    padding: 1rem 4rem;
     background-color: whitesmoke;
-    border-radius: 2px;
+    border-radius: 1px;
+}
+
+#efGoPayNowForm {
+    padding: 3rem 4rem;
+}
+
+@media (max-width: 500px) {
+    #efGoPayNowForm {
+        padding: 5px!important;
+    }
 }
 
 #efIncludedTable,
@@ -619,9 +688,10 @@
 #efOutputOptionsContainer > .efPanelHeader,
 #efContinueExistingPackageOrder > table > tbody > tr:first-child,
 .efTable > tbody > tr.efTableSubheader {
-    background-color: #1A4F85!important;
+    background-color: #175878!important;
     height: 50px!important;
-    font-family: "Omnes Pro", sans-serif;
+    background-image: none!important;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     letter-spacing: 0.2px;
     font-size: 1.6rem;
@@ -635,22 +705,28 @@
 
 #efContinueExistingPackageOrder > table > tbody > tr > td > button,
 #efContinueExistingPackageOrder > table > tbody > tr > td > form > button {
-    background-color: #e57c27;
+    background-color: #17a556;
     border: none;
+    background-image: none!important;
     padding: 5px 10px;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
 }
 
+#efContinueExistingPackageOrder > table > tbody > tr > td > form > button {
+    background-color: #ff4945;
+}
+
 #efPackageStartNew > span {
     background-color: #17a556;
+    background-image: none!important;
     border: none;
     padding: 1rem 2rem;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
@@ -685,6 +761,9 @@
 .efOptionalTrProduct > td,
 #cartPage ~ div .efTable > tbody > tr {
     background-color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #f3f3f3;
 }
 
 #cartPage ~ div .efCompanyNameRow {
@@ -696,7 +775,7 @@
 }
 
 .efTableSubheader > td {
-    background-color: #f9f9f9;
+    background-color: #d4d4d4;
     color: #222222;
 }
 
@@ -706,17 +785,18 @@
 #efNetTotalRow,
 #efVatTotalRow,
 #efTotalPriceRow {
-    background-color: #8eb7e0!important;
+    background-color: #598bbc!important;
     padding: 1rem!important;
-    font-size: 1.5rem!important;
-    font-family: "Europa", sans-serif!important;
+    font-size: 1.75rem!important;
+    font-family: "Lato", sans-serif!important;
     margin-top: 0!important;
+    color: #FFFFFF!important;
 }
 
 #efPackageTotal,
 #efTotalPriceRow,
 #efTotalPriceRow > td {
-    background-color: #1A4F85!important;
+    background-color: #175878!important;
     color: #FFFFFF!important;
     font-size: 2rem!important;
 }
@@ -732,6 +812,9 @@
 #efPackageAgreeTerms {
     margin-top: 2rem;
     margin-bottom: 1rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.75rem;
+    color: #222222;
 }
 
 #tcagree {
@@ -740,21 +823,24 @@
 }
 
 #tcagree + a {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
     margin-top: 1rem;
     display: inline-block;
 }
 
 #ef-checkout-action {
     position: absolute;
-    right: 7rem;
+    left: 7rem;
     bottom: 5rem;
     background-color: #17a556;
+    background-image: none!important;
     margin: 0 auto;
     border: none;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-size: 1.75rem!important;
+    letter-spacing: 0.2pt;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
@@ -767,12 +853,13 @@
 
 #efPackageCheckoutButton {
     background-color: #17a556;
+    background-image: none!important;
     width: 150px;
     margin: 0 auto;
     border: none;
     padding: 1rem 2rem;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
@@ -794,13 +881,24 @@
     background-color: #FFFFFF;
 }
 
+#efOptionalIncludedTable > tbody > tr.ui-widget-header {
+    background-color: #d4d4d4!important;
+    background-image: none!important;
+    color: #222222!important;
+    font-weight: 600!important;
+    font-family: "Lato", sans-serif!important;
+    font-size: 1.5rem!important;
+    letter-spacing: 0.2pt!important;
+}
+
 .efPackageTable .efButton {
-    background-color: #e57c27;
+    background-color: #3179b0;
+    background-image: none!important;
     border: none;
-    padding: 1rem 2rem;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
+    height: 30px;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -812,21 +910,33 @@
 
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable {
     background-color: #FFFFFF;
-    border: 1px solid #a4bdd6;
+    border: 1px solid #437087;
+    padding: 0 0 1rem;
+    font-family: "Lato", sans-serif;
     -webkit-box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.4);
 }
 
 .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix {
-    padding: 1rem;
-    background-color: #1A4F85;
+    background-image: none!important;
+    background-color: #5588ae;
     color: #FFFFFF;
+    padding: 1rem;
     font-weight: 600;
+    font-size: 1.75rem;
+    font-size: 1.5rem;
+    border-radius: 2px 2px 0 0;
+    border: none;
 }
 
 .ui-dialog-titlebar-close {
     float: right;
+}
+
+.ui-widget-content a {
+    color: #2b7cc3!important;
+    text-decoration: underline!important;
 }
 
 #efPaymentOptions {
@@ -838,38 +948,10 @@
     border: none;
     padding: 7px 10px;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
-}
-
-/** order process **/
-
-.ef-information-box-title {
-    font-family: "Europa", sans-serif;
-    font-size: 1.9rem;
-    margin-top: 8px;
-    margin-bottom: 15px;
-}
-
-#officer-topdog,
-#officer-holder,
-#officer-secretary,
-#officer-PSC {
-    margin-right: 6px;
-}
-
-.ef-consent-to-act-label {
-    margin-left: 6px;
-}
-
-.efPaymentFromOption {
-    padding: 0;
-}
-
-#confirmationPage ~ div p > .efButton {
-    height: auto!important;
 }
 
 /** account **/
@@ -909,7 +991,7 @@
 #efMyAccountGlance > div > .efPanelHeader {
     background-color: #1A4F85!important;
     height: 50px!important;
-    font-family: "Europa", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     letter-spacing: 0.2px;
     font-size: 1.5rem;
@@ -922,7 +1004,7 @@
     border: none;
     padding: 7px 10px;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
@@ -936,7 +1018,7 @@ p > .efButton {
     border: none;
     padding: 7px 10px;
     text-align: center;
-    font-family: "Omnes Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     color: #FFFFFF;
     text-decoration: none;
@@ -981,6 +1063,15 @@ p > .efButton {
     display: none!important;
 }
 
+.efMoreInfo.ui-dialog-content {
+    padding-left: 1rem;
+    padding-bottom: 0rem;
+    padding-top: 1rem;
+    height: 100%!important;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+}
+
 #efEmulationWidget {
     position: fixed;
     top: 69px;
@@ -994,6 +1085,90 @@ p > .efButton {
 }
 
 /** order process **/
+
+#orderPage+div > .order-progress-bar-container {
+    margin-bottom: 5rem!important;
+}
+
+.ef-information-box-title {
+    font-family: "Lato", sans-serif;
+    font-size: 1.9rem;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.ef-information-box > p {
+    font-size: 1.5rem!important;
+    color: #444444!important;
+    line-height: 1.8!important;
+    padding-right: 5rem!important;
+}
+
+form[name="ef-order-form"] {
+    font-family: "Lato", sans-serif!important;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: "Lato", sans-serif!important;
+    font-size: 1.6rem!important;
+    letter-spacing: 0.2pt!important;
+}
+
+label {
+    font-size: 1.75rem!important;
+    font-family: "Lato", sans-serif!important;
+    letter-spacing: 0.2pt!important;
+    margin-bottom: 10px!important;
+    color: #444444!important;
+}
+
+.ef-sic-code {
+    font-size: 1.25rem!important;
+    color: #222222!important;
+    font-weight: 600!important;
+}
+
+#postcodes {
+    font-size: 1.6rem!important;
+    color: #444444!important;
+}
+
+#postcodes .ef-btn.ef-primary-btn {
+    float: right!important;
+}
+
+#officer-topdog,
+#officer-holder,
+#officer-secretary,
+#officer-PSC {
+    margin-right: 6px!important;
+    margin-top: 8px!important;
+}
+
+.ef-consent-to-act-label {
+    margin-left: 6px!important;
+}
+
+.ef-consent-to-act-checkbox {
+    margin-top: 10px!important;
+}
+
+.ef-tab-link {
+    font-weight: 600!important;
+    font-size: 1.5rem!important;
+    color: #444444!important;
+}
+
+.efPaymentFromOption {
+    padding: 0!important;
+}
+
+#confirmationPage ~ div p > .efButton {
+    height: auto!important;
+}
 
 @media (max-width: 992px) {
     #orderPage+div section.content__section > .container {
@@ -1025,19 +1200,19 @@ p > .efButton {
 }
 
 .ef-cancel-btn {
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
 }
 
 .ef-add-officer {
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
 }
 
 .ef-nav-section-link {
-    background-color: #18508c!important;
+    background-color: #3179b0!important;
     border: none!important;
     padding: 20px!important;
     color: #fff !important;
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
     font-weight: 100!important;
     letter-spacing: 0.2pt!important;
     box-shadow: 0 0 12px -6px rgba(0, 0, 0, 0.8);
@@ -1057,7 +1232,7 @@ p > .efButton {
 }
 
 .ef-nav-section-link.current {
-    background-color: #E57C27!important;
+    background-color: #175878!important;
 }
 
 .ef-nav-section-link.current > a,
@@ -1071,8 +1246,8 @@ p > .efButton {
     padding-top: 10px!important;
     padding-bottom: 5px!important;
     padding-left: 5px!important;
-    background-color: #18508C!important;
-    font-family: "Europa", sans-serif!important;
+    background-color: #175878!important;
+    font-family: "Lato", sans-serif!important;
     letter-spacing: 0.2pt!important;
 }
 
@@ -1097,8 +1272,15 @@ p > .efButton {
 
 #ef-panel-title {
     padding-left: 40px!important;
-    background-color: #18508C!important;
+    background-color: #175878!important;
     color: #FFFFFF !important;
+}
+
+#ef-panel-title > h1 {
+    font-size: 2rem!important;
+    padding: 14px!important;
+    color: #FFFFFF!important;
+    letter-spacing: 0.2pt!important;
 }
 
 #ef-panel-title.head-01,
@@ -1110,6 +1292,19 @@ p > .efButton {
     background-size: 30px!important;
 }
 
+.ef-alert-box.fail {
+    border-color: #e09696!important;
+    background-color: #f2dede!important;
+    color: #a94442!important;
+    padding: 1rem 2rem!important;
+    font-family: "Lato", sans-serif!important;
+    font-weight: 600!important;
+}
+
+#ef-panel-content {
+    padding-top: 0!important;
+}
+
 .ef-next-prev-btn > .w-col {
     padding-left: 0!important;
     padding-right: 0!important;
@@ -1117,7 +1312,9 @@ p > .efButton {
 
 .ef-btn.ef-primary-btn {
     background-color: #2eab2e!important;
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 500px) {
@@ -1134,10 +1331,16 @@ p > .efButton {
 }
 
 @media (max-width: 479px) {
-    .ef-btn.ef-primary-btn:not(.ef-btn.ef-primary-btn.ef-choose-btn, .ef-btn.ef-primary-btn.ef-alt-btn.ef-edit-btn) {
+    .ef-alert-box.ef-btn.ef-primary-btn:not(.ef-btn.ef-primary-btn.ef-choose-btn, .ef-btn.ef-primary-btn.ef-alt-btn.ef-edit-btn) {
         width: 70px;
         font-size: 1.25rem;
         padding: 8px;
+    }
+}
+
+@media (max-width: 479px) {
+    .ef-btn.ef-primary-btn:not(.ef-btn.ef-primary-btn.ef-choose-btn, .ef-btn.ef-primary-btn.ef-alt-btn.ef-edit-btn) {
+        width: auto!important;
     }
 }
 
@@ -1151,7 +1354,7 @@ p > .efButton {
     color: #18508c!important;
     border: 2px solid #18508c!important;
     width: 60%!important;
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
     font-size: 1.7rem!important;
     letter-spacing: 0.2pt!important;
     padding: 1rem 0 1.25rem!important;
@@ -1198,7 +1401,7 @@ p > .efButton {
 }
 
 .additional-document {
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
     font-size: 1.8rem!important;
     letter-spacing: 0.2pt!important;
 }
@@ -1260,26 +1463,57 @@ p > .efButton {
     }
 }
 
+@media (max-width: 479px) {
+    .additional-document:not(.ef-alert-box) > .w-col.w-col-3.w-clearfix.add-col {
+        right: -30rem!important;
+    }
+}
+
+@media (max-width: 400px) {
+    .additional-document:not(.ef-alert-box) > .w-col.w-col-3.w-clearfix.add-col {
+        right: -23rem!important;
+    }
+}
+
+@media (max-width: 350px) {
+    .additional-document:not(.ef-alert-box) > .w-col.w-col-3.w-clearfix.add-col {
+        right: -18rem!important;
+    }
+}
+
 @media (max-width: 500px) {
     .additional-document > .w-col.w-col-3.w-clearfix.add-col {
         right: -12rem!important;
     }
 }
 
+@media (max-width: 479px) {
+    .additional-document > .w-col.w-col-3.w-clearfix.add-col {
+        right: -9rem!important;
+        top: 2.5rem;
+    }
+}
+
 @media (max-width: 400px) {
     .additional-document > .w-col.w-col-3.w-clearfix.add-col {
-        right: -13rem!important;
+        right: -6rem!important;
     }
 }
 
 @media (max-width: 350px) {
     .additional-document > .w-col.w-col-3.w-clearfix.add-col {
-        right: -13rem!important;
+        right: -3rem!important;
+    }
+}
+
+@media (max-width: 500px) {
+    .ef-btn.ef-add-officer.nominee {
+        width: 150px!important;
     }
 }
 
 @media (max-width: 992px) {
-    .ef-btn.ef-primary-btn:not(.ef-bank-add-btn,.ef-namecheck-button) {
+    .ef-btn.ef-primary-btn:not(.ef-bank-add-btn, .ef-namecheck-button) {
         position: absolute!important;
         right: 11rem!important;
         width: 100px!important;
@@ -1287,8 +1521,26 @@ p > .efButton {
 }
 
 @media (max-width: 767px) {
-    .ef-btn.ef-primary-btn:not(.ef-bank-add-btn,.ef-namecheck-button) {
+    .ef-btn.ef-primary-btn:not(.ef-bank-add-btn, .ef-namecheck-button) {
         top: 2rem!important;
+    }
+}
+
+@media (max-width: 479px) {
+    .ef-btn.ef-primary-btn:not(.ef-partner-contact-btn) {
+        width: 70px!important;
+        height: 30px!important;
+        padding: 5px!important;
+        margin-top: -1rem!important;
+    }
+}
+
+@media (max-width: 479px) {
+    .ef-btn.ef-primary-btn:not(.ef-edit-btn) {
+        width: 70px!important;
+        height: 30px!important;
+        padding: 5px!important;
+        margin-top: -1rem!important;
     }
 }
 
@@ -1307,9 +1559,9 @@ p > .efButton {
 
 @media (max-width: 479px) {
     .ef-btn.ef-primary-btn.item-show-details {
-        width: 70px;
-        font-size: 1.25rem;
-        padding: 8px;
+        width: 70px!important;
+        height: 30px!important;
+        padding: 5px!important;
     }
 }
 
@@ -1324,6 +1576,19 @@ p > .efButton {
 @media (max-width: 767px) {
     .ef-item-content:not(.ef-alert-box) > div > .item-box-price {
         top: -4rem!important;
+    }
+}
+
+@media (max-width: 479px) {
+    .ef-item-content:not(.ef-alert-box) > div > .item-box-price {
+        top: -6.5rem!important;
+    }
+}
+
+@media (max-width: 350px) {
+    .ef-item-content:not(.ef-alert-box) > div > .item-box-price {
+        top: -1.5rem!important;
+        right: 3rem!important;
     }
 }
 
@@ -1417,7 +1682,7 @@ p > .efButton {
     width: 95%!important;
     height: 85px!important;
     margin: 2rem auto!important;
-    font-family: "Europa", sans-serif!important;
+    font-family: "Lato", sans-serif!important;
     font-size: 1.5rem!important;
 }
 
@@ -1575,6 +1840,15 @@ p > .efButton {
 #ef-additional-documents-title,
 #ef-additional-documents-description {
     padding-left: 2.5rem!important;
+    font-size: 1.75rem!important;
+}
+
+.ef-document-box > div > div > p {
+    font-size: 1.75rem;
+}
+
+.ef-form-wrap.upload-box.upload-box-1.ef-hide {
+    overflow: visible!important;
 }
 
 .ef-forwarding-address {
@@ -1599,8 +1873,14 @@ p > .efButton {
     #ef-view-summary {
         display: block;
         position: static!important;
-        width: 100%;
+        width: 100%!important;
+        margin-top: 1rem!important;
     }
+}
+
+.panel-review {
+    font-size: 1.5rem;
+    color: #444444;
 }
 
 .ef-review-section-title {
@@ -1629,8 +1909,7 @@ p > .efButton {
     height: 50px!important;
     width: 100%!important;
     padding: 0.9rem 1.5rem!important;
-
-    background-color: #18508c!important;
+    background-color: #175878!important;
     color: #FFFFFF!important;
 }
 
@@ -1684,13 +1963,13 @@ p > .efButton {
 }
 
 .ef-review-cashback-text {
-    font-family: "Europa", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 1.75rem;
     padding-bottom: 5px;
 }
 
 .ef-review-cashback-terms {
-    font-family: "Europa", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .ef-review-cashback-section > div > div.w-col.w-col-12 {
@@ -1702,7 +1981,7 @@ p > .efButton {
     border: 1px solid red;
     border-radius: 1px;
     padding: 1rem 2rem;
-    font-family: "Europa", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -1719,8 +1998,20 @@ p > .efButton {
 }
 
 @media (max-width: 480px) {
-    .ef-btn.ef-primary-btn.ef-small-btn {
+    .ef-btn.ef-primary-btn.ef-small-btn:not(#ef-view-summary) {
         width: auto!important;
+        margin-top: 0px!important;
     }
 }
 
+#newsletter-check {
+    font-size: 1.5rem;
+}
+
+input[name="newsletter"] {
+    margin-right: 5px;
+}
+
+#cauthcard+p {
+    font-size: 1.5rem;
+}
