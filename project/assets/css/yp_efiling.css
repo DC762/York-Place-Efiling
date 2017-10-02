@@ -972,15 +972,26 @@ body {
 
 /** account **/
 
+#efAuthenticatedContent {
+    font-family: "Lato", sans-serif;
+    font-size: 1.75rem;
+}
+
 .efAccountMenu {
     padding: 1rem!important;
-    background-color: #2d5075!important;
-    border: 1px solid #222222!important;
+    background-color: #3179b0!important;
+    border: 1px solid #3179b0!important;
+    background-image: none!important;
     border-radius: 2px!important;
+    margin-bottom: 3rem!important;
 }
 
 .efAccountMainMenuLi > a {
     color: #FFFFFF!important;
+    background-color: #3179b0!important;
+    border: 1px solid #3179b0!important;
+    background-image: none!important;
+    text-decoration: none!important;
 }
 
 .efAccountMenuTabs {
@@ -996,11 +1007,6 @@ body {
 }
 
 #efPendingOrdersControl .efPanelContent {
-    border: 1px solid #d8d8d8;
-}
-
-#efMyAccountGlance {
-    margin-top: 3rem;
     border: 1px solid #d8d8d8;
 }
 
@@ -1029,6 +1035,13 @@ body {
     height: 32px;
 }
 
+.efAccountPanel > div > form > p > input.efButton {
+    background-color: #01A551!important;
+    border: 1px solid #01A551!important;
+    background-image: none!important;
+    font-size: 1.2rem!important;
+}
+
 p > .efButton {
     background-color: #17a556;
     border: none;
@@ -1050,7 +1063,9 @@ p > .efButton {
 }
 
 .efAccountMenuTabs ul {
-    background-color: #2d5075;
+    background-color: #3179b0!important;
+    border: 1px solid #3179b0!important;
+    background-image: none!important;
     padding: 2rem;
     margin-left: -11px;
 }
@@ -1061,6 +1076,18 @@ p > .efButton {
 
 .efAccountSubMenuLi > a {
     color: #FFFFFF;
+    background-color: #3179b0!important;
+    border: 1px solid #3179b0!important;
+    background-image: none!important;
+    text-decoration: none!important;
+}
+
+.efAccountMenuTabs .efAccountSubMenuLi a {
+    background-color: #3179b0!important;
+    border: 1px solid #3179b0!important;
+    color: #FFFFFF!important;
+    background-image: none!important;
+    text-decoration: none!important;
 }
 
 .efAccountSubMenuLi > a:hover,
@@ -1069,6 +1096,16 @@ p > .efButton {
 .efAccountSubMenuLi > a:visited {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.efAccountPanel > .efPanelHeader {
+    background-color: #3179b0!important;
+    color: #FFFFFF!important;
+    background-image: none!important;
+}
+
+.efPanelContent {
+    padding: 2rem!important;
 }
 
 .additional-document-5755 > div > div > div.ef-include-chfee {
