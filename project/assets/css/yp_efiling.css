@@ -1389,7 +1389,8 @@ label {
 }
 
 .ef-btn.ef-primary-btn {
-    background-color: #2eab2e!important;
+    background-color: #598bbc!important;
+    border-color: #598bbc!important;
     font-family: "Lato", sans-serif!important;
     font-weight: 600;
     font-size: 1.5rem;
