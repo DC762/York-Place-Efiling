@@ -129,11 +129,6 @@ if ( orderProgressBar != null && nameChecked != true ) {
     orderProgressBarNumberOne.classList.remove( "js__order-progress-bar__section-number--complete" );
     orderProgressBarBarOne.classList.remove( "js__order-progress-bar__bar--complete" );
 }
-if ( namecheckPage != null ) {
-    orderProgressBarNumberOne.classList.add( "js__order-progress-bar__section-number--complete" );
-    orderProgressBarBarOne.classList.add( "js__order-progress-bar__bar--complete" );
-    orderProgressBarNumberTwo.classList.add( "js__order-progress-bar__section-number--current" );
-}
 if ( buyPage != null && nameChecked || orderPage != null && nameChecked ) {
     orderProgressBarNumberOne.classList.add( "js__order-progress-bar__section-number--complete" );
     orderProgressBarBarOne.classList.add( "js__order-progress-bar__bar--complete" );
