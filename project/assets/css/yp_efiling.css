@@ -536,11 +536,6 @@ body {
     overflow-y: hidden;
 }
 
-@media (max-width: 1600px) {
-    .landing {
-        margin-top: 5em;
-    }
-}
 
 @media (max-width: 1600px) {
     .landing-box {
@@ -557,7 +552,7 @@ body {
 @media (max-width: 1280px) {
     .landing-box {
         margin-top: -20em;
-        padding: 4rem 3rem 1rem!important;
+        padding: 4rem 1rem 1rem!important;
     }
 }
 
@@ -567,25 +562,30 @@ body {
     }
 }
 
+@media (max-width: 1120px) {
+    .landing-box h2 {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .landing-box {
         margin-top: -16.5em;
-        padding: 3rem 2rem 1rem!important;
+        padding: 2rem 2rem 1rem!important;
     }
 }
 
 @media (max-width: 991px) {
-    .landing-box {
-        position: absolute;
-        top: 1rem;
-        left: 0;
-        right: 0;
-        width: 90%;
-        margin-top: 0;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 2rem!important;
-    }
+	.landing-box-relative {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 1rem;
+		padding: 0 2rem!important;
+	}
 }
 
 @media (max-width: 850px) {
@@ -800,6 +800,22 @@ body {
 .namecheck_box_amber {
 	border: 2px solid #FA8721;
 	padding: 1em;
+}
+
+@media (min-width: 991px) {
+	.namecheck_box_amber p {
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width: 420px) {
+	.landing-box p {
+		font-size: 0.9em;
+	}
+	
+	.hide-result-img {
+		display: none;
+	}
 }
 
 /** ====================
