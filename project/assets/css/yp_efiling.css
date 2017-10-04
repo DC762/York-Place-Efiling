@@ -1480,6 +1480,9 @@ label {
 
 .ef-add-officer {
     font-family: "Lato", sans-serif!important;
+    background-color: #3179b0!important;
+    background-image: url(/assets/efiling/wizard-v2/images//addperson@High.png)!important;
+    border-color: #3179b0!important;
 }
 
 .ef-nav-section-link {
@@ -1843,7 +1846,7 @@ label {
 
 @media (max-width: 767px) {
     .item-box-price {
-        position: absolute!important;
+        position: static!important;
         top: 1.5rem!important;
         right: 35%!important;
     }
@@ -1956,7 +1959,6 @@ label {
 .ef-document-box.ef-alert-box,
 .ef-alert-box.additional-document {
     width: 95%!important;
-    height: 85px!important;
     margin: 2rem auto!important;
     font-family: "Lato", sans-serif!important;
     font-size: 1.5rem!important;
@@ -2098,7 +2100,7 @@ label {
 }
 
 @media (max-width: 767px) {
-    .add-bt-0 {
+    .add-bt-0:not(.ef-choose-ma) {
         position: absolute!important;
         top: 1.5rem!important;
         right: 2rem!important;
@@ -2140,6 +2142,11 @@ label {
     background-color: #2eab2e!important;
     border-color: #2eab2e!important;
     font-size: 1.5rem!important;
+}
+
+.ef-use-own-address-btn {
+    background-color: #598bbc!important;
+    border-color: #598bbc!important;
 }
 
 #ef-view-summary {
