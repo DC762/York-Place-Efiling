@@ -72,7 +72,6 @@ if ( window.jQuery ) {
             return false;
         });
 
-
         // change namecheck result classes on package (single) page
         if ( packagePage != null ) {
             $( "#efPackageHomeTitle~#efNameCheckResult > div.efNameCheckResult > div.namecheck_box_red" ).removeClass( "col-md-offset-1 col-md-10" ).addClass( "col-lg-12" );
