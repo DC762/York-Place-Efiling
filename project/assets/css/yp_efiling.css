@@ -39,6 +39,19 @@ body {
     margin-bottom: 0;
 }
 
+/** nav **/
+@media (min-width: 769px) {
+    #fh5co-logo-mobile-wrap {
+        display: none!important;
+    }
+}
+@media (max-width: 768px) {
+    #fh5co-header-section {
+        display: none!important;
+    }
+}
+
+
 /** packages **/
 
 .submit-btn {

@@ -78,6 +78,24 @@ if ( window.jQuery ) {
             $( ".efNameCheckResult" ).addClass( "js__namecheck_packagePage" );
         }
 
+        // superfish init
+        var mainMenu = function() {
+            $( "#fh5co-primary-menu" ).superfish({
+                delay: 0,
+                animation: {
+                    opacity: "show"
+                },
+                speed: "fast",
+                cssArrows: true,
+                disableHI: true
+            });
+        };
+
+        $( ".js-fh5co-nav-toggle.fh5co-nav-toggle.fh5co-nav-white" ).click( function() {
+            document.body.classList.toggle( "fh5co-overflow" );
+            document.body.classList.toggle( "fh5co-mobile-menu-visible" );
+        });
+
     });
 }
 
