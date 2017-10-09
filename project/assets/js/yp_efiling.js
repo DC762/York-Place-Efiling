@@ -42,6 +42,13 @@ if ( getCookie( ncCookie ) ) {
     nameChecked = true;
 }
 
+/** Namecheck Result - Amber Box  **/
+var efNameCheckResult_AMBER  = document.getElementById( "efNameCheckResult_AMBER" );
+if ( efNameCheckResult_AMBER != null) {
+	document.getElementById( "AmberHide" ).style.display = "none";
+	console.log( efNameCheckResult_AMBER );
+}
+
 
 /** jquery stuff **/
 if ( window.jQuery ) {
@@ -77,6 +84,24 @@ if ( window.jQuery ) {
             $( "#efPackageHomeTitle~#efNameCheckResult > div.efNameCheckResult > div.namecheck_box_red" ).removeClass( "col-md-offset-1 col-md-10" ).addClass( "col-lg-12" );
             $( ".efNameCheckResult" ).addClass( "js__namecheck_packagePage" );
         }
+
+        // superfish init
+        var mainMenu = function() {
+            $( "#fh5co-primary-menu" ).superfish({
+                delay: 0,
+                animation: {
+                    opacity: "show"
+                },
+                speed: "fast",
+                cssArrows: true,
+                disableHI: true
+            });
+        };
+
+        $( ".js-fh5co-nav-toggle.fh5co-nav-toggle.fh5co-nav-white" ).click( function() {
+            document.body.classList.toggle( "fh5co-overflow" );
+            document.body.classList.toggle( "fh5co-mobile-menu-visible" );
+        });
 
     });
 }
