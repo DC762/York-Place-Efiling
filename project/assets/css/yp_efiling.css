@@ -51,6 +51,31 @@ body {
     }
 }
 
+@media (max-width: 1200px) {
+    #fh5co-menu-wrap {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    #fh5co-menu-wrap {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #fh5co-menu-wrap .sf-menu a {
+        color: #175878!important;
+    }
+}
+
+@media (max-width: 991px) {
+    #fh5co-logo,
+    #fh5co-logo > a > img {
+        margin: 1rem auto 0!important;
+        float: none!important;
+    }
+}
 
 /** packages **/
 
@@ -610,6 +635,12 @@ body {
 @media (max-width: 600px) {
     .landing-hero-image {
         height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing {
+        margin-top: 5em!important;
     }
 }
 
