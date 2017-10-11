@@ -46,7 +46,6 @@ if ( getCookie( ncCookie ) ) {
 var efNameCheckResult_AMBER  = document.getElementById( "efNameCheckResult_AMBER" );
 if ( efNameCheckResult_AMBER != null) {
 	document.getElementById( "AmberHide" ).style.display = "none";
-	console.log( efNameCheckResult_AMBER );
 }
 
 
@@ -98,9 +97,15 @@ if ( window.jQuery ) {
             });
         };
 
+        // manually initialise mobile superfish menu
         $( ".js-fh5co-nav-toggle.fh5co-nav-toggle.fh5co-nav-white" ).click( function() {
             document.body.classList.toggle( "fh5co-overflow" );
             document.body.classList.toggle( "fh5co-mobile-menu-visible" );
+        });
+
+        // manually initialise mobile superfish menu dropdown
+        $( ".fh5co-sub-ddown.sf-with-ul" ).click( function() {
+            $( ".fh5co-sub-menu" ).toggleClass( "js__show" );
         });
 
     });
