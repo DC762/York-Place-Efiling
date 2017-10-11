@@ -109,6 +109,34 @@ if ( window.jQuery ) {
         });
 
     });
+} else {
+    /** non jquery **/
+
+    // superfish init
+    var mainMenu = function() {
+        document.getElementById( "fh5co-primary-menu" ).superfish({
+            delay: 0,
+            animation: {
+                opacity: "show"
+            },
+            speed: "fast",
+            cssArrows: true,
+            disableHI: true
+        });
+    };
+
+    // manually initialise mobile superfish menu
+    var superfishMenu = document.querySelectorAll( "js-fh5co-nav-toggle, fh5co-nav-toggle, fh5co-nav-white" )[0];
+    superfishMenu.addEventListener( "click", function() {
+        document.body.classList.toggle( "fh5co-overflow" );
+        document.body.classList.toggle( "fh5co-mobile-menu-visible" );
+    });
+
+    // manually initialise mobile superfish menu dropdown
+    var superfishMenuDropdown = document.querySelectorAll( "fh5co-sub-ddown, sf-with-ul" )[0];
+    superfishMenuDropdown.addEventListener( "click", function() {
+        document.getElementsByClassName( "fh5co-sub-menu" )[0].classList.toggle( "js__show" );
+    });
 }
 
 
