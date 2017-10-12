@@ -85,6 +85,26 @@ body {
     }
 }
 
+#fh5co-primary-menu > li > .sf-with-ul::after {
+    border: none !important;
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    float: right;
+    margin-right: 5px;
+    top: 50%;
+    margin-top: -7px;
+    content: "\e64b";
+    color: #175878;
+}
+
 /** packages **/
 
 .submit-btn {
@@ -132,11 +152,11 @@ body {
 .content__packages-nav-tabs-tab {
     border: none;
     background-color: #3179B0;
-    height: 70px!important;
+    height: 66px!important;
     font-family: "Lato", arial, sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
-    margin-bottom: -3px!important;
+    margin-bottom: -2px!important;
     -webkit-box-shadow: 0px -3px 50px -10px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0px -3px 50px -10px rgba(0, 0, 0, 0.4);
     box-shadow: 0px -3px 50px -10px rgba(0, 0, 0, 0.4);
@@ -676,6 +696,11 @@ body {
         font-size: 16px;
         line-height: 12px;
     }
+}
+
+/** override **/
+#nameSearchForm .input-group {
+    display: table!important;
 }
 
 /** order progress bar **/
@@ -1686,6 +1711,14 @@ label {
     font-family: "Lato", sans-serif!important;
     font-weight: 600;
     font-size: 1.5rem;
+    color: #FFFFFF!important;
+}
+
+.ef-btn.ef-primary-btn:hover,
+.ef-btn.ef-primary-btn:active,
+.ef-btn.ef-primary-btn:focus,
+.ef-btn.ef-primary-btn:visited {
+    color: #FFFFFF!important;
 }
 
 @media (max-width: 500px) {
