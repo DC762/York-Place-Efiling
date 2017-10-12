@@ -2449,3 +2449,9 @@ input[name="newsletter"] {
 #cauthcard+p {
     font-size: 1.5rem;
 }
+
+@media (max-width: 991px) {
+    #efNameCheckResult > .efNameCheckResult > div > div:nth-child(2) {
+        float: none!important;
+    }
+}
