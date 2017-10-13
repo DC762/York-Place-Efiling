@@ -42,10 +42,13 @@ if ( getCookie( ncCookie ) ) {
     nameChecked = true;
 }
 
-/** Namecheck Result - Amber Box  **/
-var efNameCheckResult_AMBER  = document.getElementById( "efNameCheckResult_AMBER" );
-if ( efNameCheckResult_AMBER != null) {
-	document.getElementById( "AmberHide" ).style.display = "none";
+/** Namecheck Result - hide name check result H2 for space-saving  **/
+var efNameCheckResult_AMBER = document.getElementById( "efNameCheckResult_AMBER" ),
+    efNameCheckResult_GREEN = document.getElementById( "efNameCheckResult_GREEN" ),
+    efNameCheckResult_RED = document.getElementById( "efNameCheckResult_RED" );
+
+if ( efNameCheckResult_AMBER != null || efNameCheckResult_GREEN != null || efNameCheckResult_RED != null ) {
+	document.getElementById( "NameCheckHide" ).style.display = "none";
 }
 
 

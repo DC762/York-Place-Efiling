@@ -254,7 +254,7 @@ body {
     background-color: #f3f3f3;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1366px) {
     .content__packages-tab {
         height: 100%;
         padding: 0 2rem 2rem 2rem;
@@ -1289,7 +1289,7 @@ body {
 }
 
 #efPendingOrdersControl .efTableSubheader > td {
-    background-color: #1A4F85!important;
+    background-color: #3179b0!important;
 }
 
 #efPendingOrdersControl .efPanelContent {
