@@ -222,13 +222,23 @@ if ( confirmationPage != null ) {
     orderProgressBarBarFour.classList.add( "js__order-progress-bar__bar--complete" );
     orderProgressBarComplete.classList.add( "js__order-progress-bar__section-number--complete" );
 }
+
 if ( orderPage != null ) {
+    changeOfficerText();
     $( document ).ajaxComplete( function() {
         if ( nameChecked == true ) {
             orderProgressBarNumberOne.classList.add( "js__order-progress-bar__section-number--complete" );
             orderProgressBarBarOne.classList.add( "js__order-progress-bar__bar--complete" );
         }
     });
+
+    function changeOfficerText() {
+        // change officer text
+        if ( window.location.href.indexOf( "step=appointments" ) > -1 ) {
+            document.getElementsByClassName( "ef-add-officer-wrapper" )[0].children[0].innerHTML = "Add a Person";
+            document.getElementsByClassName( "ef-add-officer-wrapper" )[0].children[1].innerHTML = "Click on the buttons below to add a person to your company.";
+        }
+    }
 }
 
 /** order process **/
